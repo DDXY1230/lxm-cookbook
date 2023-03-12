@@ -28,7 +28,7 @@ defineProps(["outer-bg", "inner-bg", "has-border"]);
     justify-content: center;
     &.hasborder {
       // border: 1px solid red;
-    @include border(1px, blue, solid, 4px);//$width, $color, $style, $radius
+     @include border(1px, blue, solid, 4px);//$width, $color, $style, $radius
     }
     img {
       width: 20px;

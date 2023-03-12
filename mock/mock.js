@@ -6,3 +6,19 @@ module.exports = function() {
     detail: require('./cookbook-detail.json')
   }
 }
+// {
+//   "data": [
+//     {
+//       "id": 0,
+//       "x": 100
+//     },
+//     {
+//       "id": 1,
+//       "x": "2000"
+//     },
+//     {
+//       "x": "300",
+//       "id": 2
+//     }
+//   ]
+// }

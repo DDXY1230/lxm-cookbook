@@ -3,6 +3,7 @@
 import { ref, reactive } from "vue";
 import Swiper from './Swiper.vue'
 import Searchbar from '@/components/Searchbar.vue'
+import Hotcate from './Hotcate.vue'
 </script>
 <template>
   <div class=''>
@@ -12,6 +13,7 @@ import Searchbar from '@/components/Searchbar.vue'
     inner-bg="#ffffff"
     :has-border="true"
     ></Searchbar>
+    <Hotcate></Hotcate>
   </div>
 </template>
 

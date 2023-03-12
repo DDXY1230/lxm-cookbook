@@ -1,6 +1,6 @@
 <!--  -->
 <script setup>
-import { ref, reactive, watch } from "vue";
+import { ref, reactive, watch,onMounted } from "vue";
 import {useRoute} from 'vue-router'
 import cookbook from "@/assets/images/cookbook.png";
 import cookbookActive from "@/assets/images/cookbook-active.png";
@@ -8,6 +8,7 @@ import menu from "@/assets/images/menu.png";
 import menuActive from "@/assets/images/menu-active.png";
 import more from "@/assets/images/more.png";
 import moreActive from "@/assets/images/more-active.png";
+import useListStore from "@/store/listStore";
 const active = ref(0);
 const title = ref('');
 const route = useRoute()
@@ -17,6 +18,10 @@ watch(
     title.value = val.title
   }
 );
+const listStore = useListStore()
+onMounted(() => {
+  listStore.loadData()
+});
 </script>
 <template>
   <div class="">

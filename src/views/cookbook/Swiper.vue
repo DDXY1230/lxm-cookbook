@@ -5,6 +5,8 @@ import axios from 'axios'
 import swiper1 from "@/assets/images/swiper-1.png";
 import swiper2 from "@/assets/images/swiper-2.jpeg";
 import swiper3 from "@/assets/images/swiper-3.jpeg";
+import useListStore from "@/store/listStore";
+const listStore = useListStore()
 const list = ref([])
 onMounted(async () => {
   const result = await axios.get('http://localhost:9000/data')
