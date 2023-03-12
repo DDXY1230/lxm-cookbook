@@ -1,0 +1,39 @@
+@mixin border ($width: 1px, $color: red, $style:solid, $radius:5px) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    // border: 1px solid blue;
+    border-width: $width;
+    border-color: $color;
+    border-style: $style;
+    border-radius: $radius;
+    z-index: 999;
+
+    // 每种手机的devicePixelRatio的参数不一样,所以可以用媒体查询来判断,
+    //在浏览器控制台 window.devicePixelRatio 查询
+    @media screen and (-webkit-max-device-pixel-ratio: 1.49) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49) {
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2.5) {
+      width: 300%;
+      height: 300%;
+      transform: scale(0.333);
+
+    }
+    transform-origin: 0 0;
+  }
+}
