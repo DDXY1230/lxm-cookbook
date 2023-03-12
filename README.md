@@ -8,3 +8,7 @@
 4. 这个项目用的是sass样式处理器 `npm i sass node-sass -D`
 5. package.json =>script "dev": "vite --host", 加上--host启动手机电脑在一个局域网内可以访问
 也可以用这个地址去草料二维码生成一个二维码
+
+6. 接口模拟的插件, `npm i json-server -g` 
+`json-server ./mock/data.json -p 9000`启动一个端口号为9000的服务
+insomnia一个类似postman一样的接口测试器
